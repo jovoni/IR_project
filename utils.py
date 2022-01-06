@@ -15,8 +15,9 @@ def vectorize_query(q, vocab):
     vector = np.zeros(len(vocab))
     query = preprocess_query(q)
     for t in tokenize(query):
-        idx = vocab.index(t)
-        vector[idx] = 1
+        if t in vocab:
+            idx = vocab.index(t)
+            vector[idx] = 1
     return vector / np.linalg.norm(vector)
     
 def CosineScore(q, docs, vocab_idf, postings):
@@ -29,8 +30,11 @@ def CosineScore(q, docs, vocab_idf, postings):
             for doc, term_freq in posting_list.items():
                 scores[doc] += w * term_freq
     scores = [scores[i] / lenght[i] for i in range(len(scores))]
-    return scores 
+    return np.asarray(scores) 
 
+def DotProductScore(v_docs, v_query):
+    return np.asarray([np.dot(v, v_query) for v in v_docs])
+    
 to_lower = lambda x: x.lower()
 
 def clean_text(text):
