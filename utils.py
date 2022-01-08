@@ -42,6 +42,7 @@ def clean_text(text):
     text=re.sub('\n',' ',text)
     text=re.sub(r"http\S+", "", text)
     text=re.sub('[^a-z]',' ',text)
+    text=re.sub(' +',' ',x)
     return text
 
 remove_extra_spaces = lambda x: re.sub(' +',' ',x)
