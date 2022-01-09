@@ -1,11 +1,11 @@
-# Space Vector Model IR
+# Vector Space Model IR
 Information Retrieval exam's project
 
 The tool implemented should retrieve a list of books that suit the query given by the user.
 
 ## How to run SVM search
 
-* run `python3 SVM_search.py`
+* run `python3 VSM_search.py`
 * select method of search
 * choose number of docs to retrieve
 * follow instructions and obtain results
@@ -15,7 +15,7 @@ The tool implemented should retrieve a list of books that suit the query given b
 
 5 different methods have been implemented for the documents retrieval:
 
-1. Standard : straightforward space vector model retrieval
+1. Standard : straightforward vector space model retrieval
 2. Pseudo query expansion : method in which the query is expanded considering the top terms of the top retrieved docs, assuming the latter are relevant
 3. Pseudo query drift : method in which the query is modified in the vector space by considering the vector represenattion of the top retrieved docs
 3. Feedback query expansion : method in which the query is expanded considering the top terms in the relevant documents, given the feedback of the user
