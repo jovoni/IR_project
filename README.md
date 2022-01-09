@@ -3,7 +3,7 @@ Information Retrieval exam's project
 
 The tool implemented should retrieve a list of books that suit the query given by the user.
 
-## How to run SVM search
+## How to run VSM search
 
 * run `python3 VSM_search.py`
 * select method of search
