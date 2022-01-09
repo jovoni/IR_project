@@ -21,3 +21,14 @@ def vectorize_query(processed_query, vocab):
             vector[tokenId] = 1
         
     return vector / np.linalg.norm(vector)
+
+
+def vector_to_tokens(vector, vocab):
+    txt = []
+    
+    for i, value in enumerate(vector):
+        if value != 0:
+            token = vocab[i]
+            txt.append(token)
+            
+    return txt
