@@ -9,3 +9,13 @@ Information Retrieval exam's project
 * follow instructions and obtain results
 * insert ` quit ` if you want to close the program
 
+## Info about methods
+
+5 different methods have been implemented for the documents retrieval:
+
+1. Standard : straightforward space vector model retrieval
+2. Pseudo query expansion : method in which the query is expanded considering the top terms of the top retrieved docs, assuming the latter are relevant
+3. Pseudo query drift : method in which the query is modified in the vector space by considering the vector represenattion of the top retrieved docs
+3. Feedback query expansion : method in which the query is expanded considering the top terms in the relevant documents, given the feedback of the user
+4. Feedback query drift : method in which the query is modified in the vector space by considering the vector representation of the relevant documents, given the feedback of the user
+
